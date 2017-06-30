@@ -4,8 +4,8 @@
     .module('demo', [])
     .component('ng1AppComponent', {
       template: '<div>Hi</div>',
-      controller: function (sessionService) {
-        console.log(sessionService.get())
+      controller: function () {
+        console.log('hi from ng1AppComponent')
       }
     })
     .component('ng1FooComponent', {
