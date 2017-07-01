@@ -47,7 +47,8 @@ export class RootComponent {
   bootstrap: [ RootComponent ]
 })
 export class AppModule {
-  constructor(private upgrade: UpgradeModule) {
+  constructor( upgrade: UpgradeModule) {
+    upgrade.bootstrap(document.body, ['demo'], { strictDi: true });
   }
 
   ngDoBootstrap() {
