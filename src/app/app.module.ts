@@ -44,6 +44,9 @@ export class RootComponent {
 @NgModule({
   imports: [ BrowserModule, UpgradeModule ],
   declarations: [ RootComponent, Ng1FooDirective ],
+  providers: [
+    {provide: '$scope', useExisting: '$rootScope'}
+  ],
   bootstrap: [ RootComponent ]
 })
 export class AppModule {
